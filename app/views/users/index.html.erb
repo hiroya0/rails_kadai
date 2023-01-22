@@ -8,6 +8,7 @@
        <th>開始日</th>
        <th>終了日</th>
        <th>終日</th>
+       <th>スケジュールメモ</th>
        <th>更新日時</th>
      </tr>
    </thead>
@@ -20,6 +21,7 @@
          <td><%= user.start_day %></td>
          <td><%= user.end_day %></td>
          <td><%= user.all_day %></td>
+         <td><%= user.memo %></td>
          <td><%= user.updated_at %></td>
        </tr>
      <% end %>

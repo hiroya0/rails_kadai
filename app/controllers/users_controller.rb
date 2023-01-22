@@ -8,6 +8,12 @@ class UsersController < ApplicationController
   end
 
   def create
+    @user = User.new(params.require(:user).permit(:title, :start_day, :end_day, :all_day, :memo))
+     if @user.save
+       redirect_to :users
+     else
+       render "new"
+     end
   end
 
   def show
