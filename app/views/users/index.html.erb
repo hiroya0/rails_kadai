@@ -10,6 +10,7 @@
        <th>終日</th>
        <th>スケジュールメモ</th>
        <th>更新日時</th>
+       <th>作成日時</th>
      </tr>
    </thead>
  
@@ -22,8 +23,12 @@
          <td><%= user.end_day %></td>
          <td><%= user.all_day %></td>
          <td><%= user.memo %></td>
-         <td><%= user.updated_at %></td>
-       </tr>
+         <td><%= user.updated_at.to_s(:datetime_jp) %></td>
+         <td><%= user.created_at.to_s(:datetime_jp) %></td>
+         <td>
+         <%= link_to "詳細", user %>
+         </td>
+         </tr>
      <% end %>
    </tbody>
  </table>
