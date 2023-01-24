@@ -1,5 +1,9 @@
 <h3>ユーザー情報一覧</h3>
- 
+
+<% if flash[:notice] %>
+<p class="notice"><%= flash[:notice] %></p>
+<% end %>
+
  <table>
    <thead>
      <tr>
@@ -27,6 +31,12 @@
          <td><%= user.created_at.to_s(:datetime_jp) %></td>
          <td>
          <%= link_to "詳細", user %>
+         </td>
+         <td>
+          <%= link_to "編集", [:edit, user] %>
+         </td>
+         <td>
+           <%= link_to "削除", user, method: :delete, data: { confirm: "本当に削除しますか？" } %>
          </td>
          </tr>
      <% end %>
