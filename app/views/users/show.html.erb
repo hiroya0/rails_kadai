@@ -1,4 +1,4 @@
-<h3>ユーザー詳細</h3>
+<h3>予定詳細</h3>
 
 <table>
   <tr>
@@ -15,7 +15,11 @@
   </tr>
   <tr>
     <th>終日</th>
-    <td><%= @user.all_day %></td>
+    <td>
+    <% if @user.all_day == true %>
+    <%= "○"%>
+    <% end %>
+    </td>
   </tr>
   <tr>
     <th>スケジュールメモ</th>
@@ -25,6 +29,6 @@
 
 <div>
   <ul>
-    <li><%= link_to "ユーザー情報一覧に戻る", :users %></li>
+    <li><%= link_to "予定一覧に戻る", :users %></li>
   </ul>
 </div>

@@ -1,4 +1,4 @@
-<h3>ユーザー情報一覧</h3>
+<h3>スケジュール一覧</h3>
 
 <% if flash[:notice] %>
 <p class="notice"><%= flash[:notice] %></p>
@@ -25,10 +25,16 @@
          <td><%= user.title %></td>
          <td><%= user.start_day %></td>
          <td><%= user.end_day %></td>
-         <td><%= user.all_day %></td>
+         <td>
+          <% if user.all_day == true %>
+          <%= "○" %>
+          <% else user.all_day == false %>
+          <% end %></td>
+        </td>
          <td><%= user.memo %></td>
          <td><%= user.updated_at.to_s(:datetime_jp) %></td>
          <td><%= user.created_at.to_s(:datetime_jp) %></td>
+         
          <td>
          <%= link_to "詳細", user %>
          </td>
@@ -43,4 +49,9 @@
    </tbody>
  </table>
  
- <p><%= link_to "ユーザー新規登録", :new_user %></p>
+ <p><%= link_to "予定の新規登録", :new_user %></p>
+
+ <div class ="information">
+        <a class = "information-1"><%= "合計予定数：#{@users.count}件" %></a>
+        <a class ="information-2"><%= "本日の日付：#{Date.today}" %></a>
+    </div>
