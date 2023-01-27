@@ -1,7 +1,6 @@
 <h3>予定の新規追加</h3>
-<%= render "shared/error", obj: @user %>
-
- <%= form_with model: @user do |f| %>
+ 
+ <%= form_with model: @schedule do |f| %>
    <table>
      <tr>
        <th><%= f.label :title ,"タイトル" %></th>
@@ -32,8 +31,8 @@
  
    <div>
      <ul>
-       <li><%= f.submit "登録完了する"%></li>
-       <li><%= link_to "スケジュール一覧に戻る", :users %></li>
+       <li><%= f.submit "更新する"%></li>
+       <li><%= link_to "スケジュール一覧に戻る", :schedules %></li>
      </ul>
    </div>
  <% end %>
