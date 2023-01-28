@@ -22,8 +22,8 @@
        <tr>
          <td><%= schedule.id %></td>
          <td><%= schedule.title %></td>
-         <td><%= schedule.start_day %></td>
-         <td><%= schedule.end_day %></td>
+         <td><%= schedule.start_day.strftime("%Y/%m/%d") %></td>
+         <td><%= schedule.end_day.strftime("%Y/%m/%d")%></td>
          <td>
           <% if schedule.all_day == true %>
           <%= "○" %>

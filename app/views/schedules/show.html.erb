@@ -6,11 +6,11 @@
 	</tr>
 	<tr>
 		<th>開始日</th>
-		<td><%= @schedule.start_day %></td>
+		<td><%= @schedule.start_day.strftime("%Y/%m/%d") %></td>
 	</tr>
 	<tr>
 		<th>終了日</th>
-		<td><%= @schedule.end_day %></td>
+		<td><%= @schedule.end_day.strftime("%Y/%m/%d") %></td>
 	</tr>
 	<tr>
 		<th>終日</th>
