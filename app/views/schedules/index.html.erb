@@ -1,8 +1,7 @@
 <h3>スケジュール一覧</h3>
-
-<% if flash[:notice] %>
-<p class="notice"><%= flash[:notice] %></p>
-<% end %>
+  <% if flash[:notice] %>
+    <p class="notice"><%= flash[:notice] %></p>
+  <% end %>
 
  <table>
    <thead>
@@ -49,9 +48,9 @@
    </tbody>
  </table>
  
- <p><%= link_to "予定の新規登録", :new_schedule %></p>
+ <p class ="new_schedules"><%= link_to "予定の新規登録", :new_schedule %></p>
 
  <div class ="information">
-        <a class = "information-1"><%= "合計予定数：#{@schedules.count}件" %></a>
+        <a class ="information-1"><%= "合計予定数：#{@schedules.count}件" %></a>
         <a class ="information-2"><%= "本日の日付：#{Date.today}" %></a>
-    </div>
+  </div>
